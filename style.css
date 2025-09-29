@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #c74141;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: #ff4d4d;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("food court.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+align-items: center;
+text-shadow: 0 0 4px #000000, 0 0 8px #000000;
+border: 2px solid #000000;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.3em;
+}
+
+/* Menu Section */
+.menu {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.menu h2 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: #ff4d4d;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.menu .item {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.menu .item:hover {
+  transform: scale(1.05);
+}
+
+.menu img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background: url("https://via.placeholder.com/1200x700") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+}
+
+.about-content {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #ffdb4d;s
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #ff4d4d;
+}
+
+.contact p {
+  margin: 8px 0;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .menu h2, .about h2, .contact h2 {
+    font-size: 2em;
+  }
+}
